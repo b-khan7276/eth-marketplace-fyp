@@ -18,3 +18,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
+ [React Props](https://github.com/b-khan7276/notes-props-react)
