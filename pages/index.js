@@ -1,31 +1,24 @@
-import { Hero,  } from "@components/common"
-import { CourseList,  } from "@components/course"
-import BaseLayout from "@components/layout/base"
+import { Hero } from "@components/common"
+import { CourseList } from "@components/course"
+import { BaseLayout } from "@components/layout"
 import { getAllCourses } from "@content/courses/fetcher"
-// import { Card } from "@components/order"
-// import { EthRates, WalletBar } from "@components/web3"
-export default function Home(courses) {
+
+export default function Home({courses}) {
   return (
-   
- <>
-       
-         <Hero/>
-         {JSON.stringify(courses)}
-    {/* <Breadcrumns/>
-        <EthRates/>
-          <WalletBar/>
-             <Card/> */}
-     <CourseList/>
-       
- 
-         </>
+    <>
+      <Hero />
+      <CourseList
+        courses={courses}
+      />
+    </>
   )
 }
-export function getStaticProps(){
-  const {data} = getAllCourses()
-  return{
-    props:{
-      courses:data
+
+export function getStaticProps() {
+  const { data } = getAllCourses()
+  return {
+    props: {
+      courses: data
     }
   }
 }
