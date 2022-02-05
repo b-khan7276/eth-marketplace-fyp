@@ -10,6 +10,7 @@ export default function Course({course}) {
     return (
       <>
         <div className="py-4">
+            {/* Calling the course hero to show the courses on the page */}
           <CourseHero
         //   call the props od couse in course hero 
             title={course.title}
@@ -17,12 +18,17 @@ export default function Course({course}) {
             image={course.coverImage}
           />
         </div>
-        <Keypoints />
-        <Curriculum />
-        <Modal />
-      </>
-    )
-  }
+        <Keypoints
+        points={course.wsl}
+      />
+      <Curriculum
+        locked={true}
+      />
+      <Modal />
+    </>
+  )
+}
+
 //  To get the static paths 
 export function getStaticPaths(){
     //  Fetch all our courses
