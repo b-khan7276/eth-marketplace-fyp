@@ -7,18 +7,20 @@ import { getAllCourses } from "@content/courses/fetcher";
 
 export default function Course({course}) {
 
- 
-  
     return (
-   <>
-   {course.title}
-   <div className="py-4">
-       <CourseHero/>
-       </div>
-        <Keypoints/>
-       <Curriculum/>
-       <Modal/>
-       </>
+      <>
+        <div className="py-4">
+          <CourseHero
+        //   call the props od couse in course hero 
+            title={course.title}
+            description={course.description}
+            image={course.coverImage}
+          />
+        </div>
+        <Keypoints />
+        <Curriculum />
+        <Modal />
+      </>
     )
   }
 //  To get the static paths 
