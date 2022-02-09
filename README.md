@@ -19,3 +19,6 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
  [React Props](https://github.com/b-khan7276/notes-props-react)
+
+
+ npm i web3 @metamask/detect-provider
