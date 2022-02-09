@@ -13,7 +13,6 @@ export default function Footer() {
 
   return (
     <section>
-      {account}
       <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
         <nav className="relative" aria-label="Global">
           <div className="flex justify-between items-center">
@@ -51,9 +50,15 @@ export default function Footer() {
                     Loading...
                 </Button> :
                 isWeb3Loaded ?
+                account ?
+                <Button
+                  hoverable={false}
+                  className="cursor-default">
+                  Hi there
+                </Button> :
                 <Button
                   onClick={connect}>
-                    Connect
+                  Connect
                 </Button> :
                 <Button
                   onClick={() => window.open("https://metamask.io/download.html", "_blank")}>
@@ -64,6 +69,13 @@ export default function Footer() {
           </div>
         </nav>
       </div>
+      { account &&
+        <div className="flex justify-end pt-1 sm:px-6 lg:px-8">
+          <div className="text-white bg-indigo-600 rounded-md p-2">
+            {account}
+          </div>
+        </div>
+      }
     </section>
   )
 }
