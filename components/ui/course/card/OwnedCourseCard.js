@@ -1,7 +1,10 @@
-export default function Card(){
-    return(
-            
-        <div className="bg-white shadow overflow-hidden sm:rounded-lg mb-3">
+
+
+
+export default function OwnedCourseCard() {
+
+    return (
+      <div className="bg-white shadow overflow-hidden sm:rounded-lg mb-3">
         <div className="px-4 py-5 sm:px-6">
           <h3 className="text-lg leading-6 font-medium text-gray-900">
             Next JS & Typescript with Shopify Integration - Full Guide
@@ -10,7 +13,7 @@ export default function Card(){
             0.0065 ETH
           </p>
         </div>
-
+  
         <div className="border-t border-gray-200">
           <dl>
             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -92,4 +95,4 @@ export default function Card(){
         </div>
       </div>
     )
-}
+  }

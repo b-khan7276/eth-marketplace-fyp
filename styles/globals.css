@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.fit{
-  main-height:calc(100vh - 88px);
+.fit {
+  min-height: calc(100vh - 88px);
+}
+
+.next-image-wrapper > div {
+  height: 100%;
 }
